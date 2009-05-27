@@ -13,13 +13,9 @@ out_header = ''
       while (l = f.readline)
         if l =~ /^\x00\x5B\x00\x70/u   # "[p" unicode
           player = l.scan(/\x00\x5b\x00\x70\x00\x6c\x00\x61\x00\x79\x00\x65\x00\x72\x00\x3d(.*)\x00\x5d\x00\x0d\x00\x0a/u)
-          puts player
-          puts l
         elsif l !~ /^\x00\x0d\x00\x0a$/
           note = l
           players.has_key?(player) ? players[player] << note : players[player] = note
-        else
-          puts "woops"
         end
       end
     rescue EOFError
