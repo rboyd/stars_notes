@@ -1,0 +1,1 @@
+This script merges two files "notes.txt" and "notes2.txt" in the current directory and writes "notes.out" which contains combined player notes for PokerStars.
